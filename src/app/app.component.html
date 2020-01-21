@@ -1,0 +1,52 @@
+<img src="assets/icon.png" style="width: 8%;" alt="">
+<h2 style="text-align: center;"  >Registro Visitas T&T Asesorias de Calidad</h2>
+
+<div style="margin-top: 40px;">
+
+  <table style=" width: 80%; margin: auto" class="table table-hover table-dark"  >
+    
+    <thead>
+      <tr>
+        
+        <th scope="col">Crédito</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Observación</th>
+        <th scope="col">Tipo de Gestión</th>
+        <th scope="col">Sub Tipificación</th>
+        <th scope="col">Tipo de Contacto</th>
+        <th scope="col">Altitud</th>
+        <th scope="col">Longitud</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items | async">
+       
+        <td> {{item.credit}}</td>
+        <td> {{item.name}}</td>
+        <td> {{item.location}}</td>
+        <td> {{item.observation}}</td>
+        <td> {{item.management}}</td>
+        <td> {{item.typification}}</td>
+        <td> {{item.contact}}</td>
+        <td> {{item.lat}}</td>
+        <td> {{item.lon}}</td>
+        
+      </tr>
+
+    </tbody>
+  </table>
+ 
+  
+</div>
+<button class="button" 	 (click)="exportarAsXLSX()" >exportar a excel</button>
+
+
+
+
+<!--
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+-->
