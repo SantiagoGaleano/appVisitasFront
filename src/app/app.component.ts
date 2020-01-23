@@ -22,7 +22,7 @@ export class AppComponent {
   constructor(db: AngularFireDatabase, private excelservice: ExporterService) {
     this.items = db.list('visit').valueChanges();
 
-    this.query = db.list('visit', ref => ref.orderByChild("managment").equalTo("Mensaje")).valueChanges();
+    this.query = db.list('visit', ref => ref.orderByChild("managment").equalTo("Mensaje  ")).valueChanges();
 
 
     console.log(this.query);
@@ -32,8 +32,6 @@ export class AppComponent {
 
     this.get_data = this.items.subscribe(response => this.dataFire = response);
     console.log('hola' + this.get_data)
-
-
 
 
   }
