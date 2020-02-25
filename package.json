@@ -58,10 +58,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "^2.3.4"
   },
   "engines": {
-    "node": "10.14.2",
-    "npm": "6.4.1"
+    "node": "~8.9.1",
+    "npm": "6.0.0"
   }
 }
